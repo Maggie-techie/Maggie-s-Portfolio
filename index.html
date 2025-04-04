@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margaret Njeri Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <div class="nav-logo">Margaret Njeri</div>
+        
+        
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Software Developer</h1>
+                <p>Hi, I'm <span>Maggie</span> <br>  a software developer <br>specializing in designing and developing <br>high-performance applications.</p>
+
+            </div>
+        </div>
+
+    </div>
+    <!--about section--> 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photos/maggie.jpg" alt="owner's image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey there! i'm Maggie ,a passionate software developer with a love for crafting efficient ,user friendly application 
+                        i specialize in frontend development ,working with html,css and javascript .i enjoy bringing ideas to life through code 
+                        I've worked on projects like butterfly counter app tailored to count the number of butterflies in a given area .
+
+                        I'm constantly exploring new technologies and improving my skills . 
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                        
+
+
+    
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br> Web app development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience" >
+                        <ul>
+                            <li><span>2025</span><br> Student at PLP</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-2026</span><br> Student at Dedan Kimathi University of Technology</li>
+                            <li><span>2025</span><br> student at PLP Academy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Project Section-->
+    <section id="projects">
+        <div class="container">
+            <h1 class="section-title">My Projects</h1>
+            <div class="projects-list">
+                <!-- Butterfly Counting App -->
+                <div class="project">
+                    <img src="photos/butterflycounter.jpeg" alt="Butterfly Counting App">
+                    <h3>Butterfly Counting App</h3>
+                    <p>An app designed for butterfly enthusiasts and researchers to track and analyze butterfly populations.</p>
+                    <a href="https://github.com/Maggie-techie/butterfly-counting-app.git" target="_blank" class="btn">View Project</a>
+                </div>
+    
+                <!-- Basketball scoreboard App -->
+                <div class="project">
+                    <img src="photos/basketball.png" alt="Hometown App">
+                    <h3>Basketball Scoreboard App</h3>
+                    <p>A dynamic basketball scoreboard that tracks scores, game time, and periods in real time.</p>
+                    <a href="https://github.com/Maggie-techie/basketball.git" target="_blank" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <!-- Left Section with Contact Info and Social Icons -->
+            <div class="content-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p class="contact-info">karongo27@gmail.com</p>
+                <p class="contact-info">+254714007761</p>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/margaret-karongo-61a073317" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Maggie-techie" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <a href="photos/curriculum vitae.pdf" download class="btn btn2">Download CV</a>
+            </div>
+
+            <!-- Right Section with Contact Form -->
+            <div class="content-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Enter your Name" required>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Write your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname, event) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+        
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+    <!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 Your Margaret Njeri. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
